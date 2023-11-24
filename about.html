@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>footware - Find your footware</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- - preload banner-->
+  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+  
+  <style>
+    form {
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .g-signin2,
+    .fb-login-button {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  </style>
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.svg" width="190" height="50" alt="Footcap logo">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="products.html" class="navbar-link">Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="products.html" class="navbar-link">Shop</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="blog.html" class="navbar-link">Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+
+        <ul class="nav-action-list">
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Search</span>
+            </button>
+          </li>
+
+          <li>
+            <a href="account.html" class="nav-action-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Login / Register</span>
+            </a>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+
+              <span class="nav-action-text">Wishlist</span>
+
+              <data class="nav-action-badge" value="5" aria-hidden="true">5</data>
+            </button>
+          </li>
+
+          <li>
+            <button class="nav-action-btn">
+              <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
+
+              <data class="nav-action-text" value="3180.00">Basket: <strong>Ksh. 3180.00</strong></data>
+
+              <data class="nav-action-badge" value="4" aria-hidden="true">4</data>
+            </button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  
+ 
+  
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign In</title>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID">
+      <script src="https://connect.facebook.net/en_US/sdk.js" async defer></script>
+      <script src="https://platform.twitter.com/widgets.js"></script>
+      
+    </head>
+    <body>
+    
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    
+        <button type="submit">Sign In</button>
+      </form>
+    
+      <div class="g-signin2" data-onsuccess="onGoogleSignIn"></div>
+      <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false"></div>
+    
+      <a href="https://api.twitter.com/oauth/authenticate?oauth_token=YOUR_OAUTH_TOKEN">
+        <img src="https://developer.twitter.com/content/dam/developer-twitter/images/sign-in-with-twitter-gray.png" alt="Sign in with Twitter">
+      <script>
+        function onGoogleSignIn(googleUser) {
+          // Handle the sign-in logic for Google
+          var profile = googleUser.getBasicProfile();
+          console.log('Google ID: ' + profile.getId());
+          console.log('Google Name: ' + profile.getName());
+          console.log('Google Email: ' + profile.getEmail());
+        }
+    
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId: 'YOUR_FACEBOOK_APP_ID',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v13.0'
+          });
+        };
+    
+        function facebookLogin() {
+          FB.login(function(response) {
+            if (response.authResponse) {
+              console.log('Facebook ID: ' + response.authResponse.userID);
+              // You can make further Facebook API calls with the obtained access token
+            } else {
+              console.log('Facebook login failed.');
+            }
+          }, { scope: 'public_profile,email' });
+        }
+      </script>
+      <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    </body>
+    </html>
+    
+
+
+
+
+
+
+ <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="160" height="50" alt="Footcap logo">
+          </a>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-link-box">
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Contact Us</p>
+            </li>
+
+            <li>
+              <address class="footer-link">
+                <ion-icon name="location"></ion-icon>
+
+                <span class="footer-link-text">
+                  GREATNESS LTD HOUSE 4th FLR, MONROVIA LANE.
+                </span>
+              </address>
+            </li>
+
+            <li>
+              <a href="tel:+254712 497 280" class="footer-link">
+                <ion-icon name="call"></ion-icon>
+
+                <span class="footer-link-text">+254712 497 280</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="dhiambofelix.ke254@gmail.com" class="footer-link">
+                <ion-icon name="mail"></ion-icon>
+
+                <span class="footer-link-text">odhiambofelix.ke254@gmail.com</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">My Account</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">My Account</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">View Cart</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">Wishlist</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">Compare</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+
+                <span class="footer-link-text">New Products</span>
+              </a>
+            </li>
+
+          </ul>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Opening Time</p>
+
+            <table class="footer-table">
+              <tbody>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Mon - Tue:</th>
+
+                  <td class="table-data">8AM - 10PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Wed:</th>
+
+                  <td class="table-data">8AM - 7PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Fri:</th>
+
+                  <td class="table-data">7AM - 12PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sat:</th>
+
+                  <td class="table-data">9AM - 8PM</td>
+                </tr>
+
+                <tr class="table-row">
+                  <th class="table-head" scope="row">Sun:</th>
+
+                  <td class="table-data">Closed</td>
+                </tr>
+
+              </tbody>
+            </table>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="newsletter-text">
+              Authoritatively morph 24/7 potentialities with error-free partnerships.
+            </p>
+
+            <form action="" class="newsletter-form">
+              <input type="email" name="email" required placeholder="Email Address" class="newsletter-input">
+
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2023 <a href="index.html" class="copyright-link">footwear</a>. All Rights Reserved
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+</body>
+</html>
+
+
+
+
+
